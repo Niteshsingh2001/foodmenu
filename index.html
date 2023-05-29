@@ -74,19 +74,20 @@
                 let id = event.currentTarget.getAttribute("data-id");
 
                 event.currentTarget.setAttribute("data-id", waterID)
+                event.currentTarget.classList.remove("bg-gray-200");
+                event.currentTarget.classList.add("bg-green-600");
                 event.currentTarget.childNodes[1].style.backgroundImage = `url(${jsonData[waterID]["images-src"]})`
                 event.currentTarget.childNodes[3].children[0].innerText = jsonData[waterID]["name"]
                 event.currentTarget.childNodes[3].children[0]
 
                 cards[waterID].setAttribute("data-id", id)
-                cards[waterID].style.backgroundColor = "green"
                 cards[waterID].childNodes[1].style.backgroundImage = `url(${jsonData[id]["images-src"]})`
                 cards[waterID].childNodes[3].children[0].innerText = jsonData[id]["name"]
                 cards[waterID].childNodes[3].children[0]
 
                 setInterval(() => {
                     window.location.reload()
-                }, 5000)
+                }, 3000)
 
             })
         }
