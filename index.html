@@ -79,6 +79,7 @@
                 event.currentTarget.childNodes[3].children[0]
 
                 cards[waterID].setAttribute("data-id", id)
+                cards[waterID].style.color = "green"
                 cards[waterID].childNodes[1].style.backgroundImage = `url(${jsonData[id]["images-src"]})`
                 cards[waterID].childNodes[3].children[0].innerText = jsonData[id]["name"]
                 cards[waterID].childNodes[3].children[0]
